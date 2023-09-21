@@ -1,0 +1,88 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3FFF4;
+    margin: 0;
+
+}
+
+.navbar {
+    z-index: 3;
+    background-color: #048853;
+}
+
+* {
+    z-index: 2;
+}
+
+.brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Link {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.Link:hover {
+    font-weight: 700;
+}
+
+.btn_primery {
+    background: transparent;
+    margin: 20px;
+    padding: 5px 20px;
+    color: #f2f2f2;
+    font-weight: 700;
+    border: 1px solid #ffffffea;
+}
+
+.btn_primery:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn_keyprimer {
+    background: transparent;
+    border: none;
+    margin: 20px;
+    padding: 5px 20px;
+    color: #048853;
+    font-weight: 700;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.link {
+    text-decoration: none;
+    color: #048853;
+}
+
+.imageProfile {
+    width: 40px;
+    cursor: pointer;
+}
+
+.dropdownTogle {
+    width: 200px;
+    background-color: #fff;
+    position: absolute;
+    right: 1%;
+    margin-top: 5px;
+    transition: all 1s;
+    align-content: center;
+    padding: 5px;
+}
+
+.nameProfile {
+    border-bottom: 2px solid rgb(251, 166, 19);
+    margin-top: 20px;
+}
+
+.btnLogout {
+    width: 100%;
+    margin-top: 17px;
+    margin-bottom: 4px;
+    color: #fff;
+}

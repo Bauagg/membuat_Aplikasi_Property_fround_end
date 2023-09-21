@@ -1,0 +1,95 @@
+.container1 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.judulCart {
+    border-bottom: 2px solid rgb(251, 166, 19);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.imageProduct {
+    width: 80px;
+    height: 82.29px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.container2 {
+    background-color: #fff;
+    margin-bottom: 10px;
+    width: 1050px;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    filter: drop-shadow(3px 3px 1px #909090);
+}
+
+.btnSelect {
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #048853;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.nameProduct {
+    width: 250px;
+    margin-left: 10px;
+    padding-top: 15px;
+}
+
+.date {
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 50px;
+}
+
+.dateData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    padding-top: 10px;
+}
+
+.pragrafProduct {
+    margin-top: -20px;
+}
+
+.btnUpdate {
+    width: 100%;
+    border: 1px solid #048853;
+    background-color: #048853;
+    height: 30px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.btnSampah {
+    background-color: #ffffff00;
+    border: none;
+
+}
+
+.conten2 {
+    width: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.chekout {
+    margin: auto;
+}

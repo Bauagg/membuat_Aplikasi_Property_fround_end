@@ -1,0 +1,123 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3FFF4;
+    margin: 0;
+}
+
+/* hero section */
+
+#hero {
+    background: linear-gradient(160deg, #048853, #000906);
+    width: 100%;
+    height: 100vh;
+}
+
+.imageHero {
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.imageLayer {
+    z-index: 1;
+}
+
+.judul {
+    margin-top: 200px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.paragraf {
+    width: 453px;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.btn_Menu {
+    background-color: #fff;
+    border: none;
+    padding: 14px 30px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #048853;
+}
+
+/* hero section */
+
+/* layanan section */
+#layanan {
+    padding: 110px 0;
+}
+
+.layanan_judul {
+    font-weight: 500;
+    color: #048853;
+    font-size: 48px;
+}
+
+.layanan_paragraf {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.hero_container2 {
+    width: 273px;
+    height: 63px;
+    background-color: #048853;
+}
+
+.cart_layanan {
+    width: 100%;
+    height: 313px;
+    border-radius: 5%;
+    padding: 40px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, p, 0.005);
+    background-color: #fff;
+}
+
+.cart_icons {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #048853;
+}
+
+.image_layanan {
+    width: 57px;
+}
+
+.layanan_judul {
+    color: #048853;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cart_layanan:hover {
+    background: linear-gradient(160deg, #048853, #000906);
+    transition: all .2s ease-in;
+}
+
+.cart_layanan:hover .cart_icons {
+    background-color: #fff;
+    transition: all .2s ease-in;
+}
+
+.cart_layanan:hover .layanan_judul {
+    color: #fff;
+    transition: all .2s ease-in;
+}
+
+.cart_layanan:hover .layanan_paragraf {
+    color: #fff;
+    transition: all .2s ease-in;
+}
+
+.btn1 {
+    background-color: #ffffff00;
+    border: none;
+}
+
+/* layanan section */

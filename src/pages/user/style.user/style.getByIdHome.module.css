@@ -1,0 +1,96 @@
+.container1 {
+    display: flex;
+    margin-top: 40px;
+}
+
+.imageHero {
+    width: 300px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.btn1 {
+    background-color: #048853;
+    border: 2px solid #048853;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-right: 10px;
+    padding: 4px;
+}
+
+.btn2 {
+    background-color: #048853;
+    border: 2px solid #048853;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 4px;
+    width: 70px;
+}
+
+.inputQty {
+    width: 50px;
+    text-align: center;
+    padding: 4px;
+}
+
+.container3 {
+    background-color: #fff;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-left: 80px;
+}
+
+
+.btnCart {
+    background-color: #048853;
+    border: 2px solid #048853;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 220px;
+    padding: 5px 12px;
+}
+
+.btnSewa {
+    background-color: #048853;
+    border: 2px solid #048853;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 12px;
+    width: 100%;
+}
+
+.formDate {
+    margin-left: 30px;
+    width: 300px;
+}
+
+.container2 {
+    border-bottom: 2px solid rgb(251, 166, 19);
+    margin-top: 50px;
+}
+
+.judulDescription {
+    color: #048853;
+    font-weight: bold;
+}
+
+.btnSampah {
+    margin-left: 10px;
+}
+
+.paragraf {
+    text-align: justify;
+    color: #909090;
+    margin-top: 20px;
+}
+
+.category {
+    font-weight: bold;
+    padding-right: 28px;
+}

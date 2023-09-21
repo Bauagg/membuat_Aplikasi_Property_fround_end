@@ -1,0 +1,75 @@
+/* navbar */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3FFF4;
+    margin: 0;
+}
+
+.container1 {
+    background-image: url('../images/bacg.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.iconAlamat {
+    width: 90%;
+    margin-right: 13px;
+    padding-right: 15px;
+}
+
+.paragrafKontak {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.td_text {
+    color: white;
+    font-size: 13px;
+    padding-top: 13px;
+}
+
+.tr {
+    padding-top: 13px;
+}
+
+.container_form {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.input1 {
+    width: 100%;
+    margin-top: 35px;
+    height: 50px;
+    background-color: #C4C4C4;
+    border: none;
+    padding: 0 20px;
+}
+
+.btn_kirim {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: #00985B;
+    margin-top: 35px;
+    color: white;
+}
+
+.judul_form {
+    text-align: center;
+    padding-top: 60px;
+    color: #00985B;
+}
+
+.containerFutter {
+    height: 160px;
+    padding-top: 20px;
+}

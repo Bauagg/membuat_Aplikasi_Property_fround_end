@@ -1,0 +1,170 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3FFF4;
+    margin: 0;
+}
+
+/* search section */
+#search {
+    background-image: url('../../images/background_img.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.search_judul {
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 150px;
+    color: #fff;
+}
+
+.search_paragraf {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.button_jual:hover {
+    color: #048853;
+}
+
+.search_lis {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    color: black;
+    font-weight: 500;
+}
+
+#customDropdown1 {
+    color: #048853;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 0;
+}
+
+#customDropdown2 {
+    color: #048853;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+}
+
+.form_input_search {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#button_search {
+    background-color: #048853;
+    color: #fff;
+    width: 90px;
+    border-radius: 0;
+    border: none;
+}
+
+/* search section */
+
+/* branda section */
+.tempat_cart {
+    background-color: #fff;
+    border-radius: 10px;
+    width: calc(25% - 20px);
+    margin-right: 20px;
+}
+
+.tempat_cart:nth-child(4n) {
+    margin-right: 0;
+}
+
+.tempat_cart:hover {
+    background: linear-gradient(160deg, #048853, #000906);
+}
+
+.cart1 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: none;
+}
+
+.tempat_cart:hover .cart1 {
+    background: linear-gradient(160deg, #048853, #000906);
+    color: #fff;
+}
+
+.icon_branda {
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tempat_cart:hover .icon_branda {
+    background-color: #fff;
+    color: black;
+}
+
+.icon_paragraf {
+    font-size: 10px;
+}
+
+.image_product {
+    width: 100%;
+    height: 200px;
+}
+
+.icon_paragraf2 {
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.text_titel {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.cart_text {
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.icon_gambar1 {
+    width: 21px;
+}
+
+.icon_gambar2 {
+    width: 18px;
+
+}
+
+.lihat_lainya {
+    background: transparent;
+    color: black;
+    border: none;
+    width: 200px;
+}
+
+.paragraf_link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.judul_branda {
+    color: #048853;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.cart {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tempat_cart .cart:nth-child(4n+1) {
+    clear: left;
+}
+
+/* branda section */

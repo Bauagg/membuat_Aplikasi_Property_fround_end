@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3FFF4;
+    margin: 0;
+}
+
+/* fitur rumah section */
+
+.container_fitur_rumah {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.judul_fitur {
+    color: #048853;
+    font-weight: 500;
+}
+
+.btn_judul_fitur {
+    border-radius: 0;
+    background-color: #048853;
+    border: none;
+    width: 230px;
+    justify-items: center;
+}
+
+.btn_judul_fitur:hover {
+    background-color: #048853;
+}
+
+.img_btn {
+    width: 20px;
+}
+
+.heding_fitur {
+    color: #fff;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.paragraf_fitur {
+    color: #fff;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.heding_fitur2 {
+    color: #fff;
+}
+
+.btn_fitur_lihat_rumah {
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    background-color: #048853;
+    width: 150px;
+    height: 45px;
+    margin-top: 50px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: all ease-in-out .3s;
+}
+
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.btn_end {
+    background-color: #048853;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+}
+
+.image_end {
+    width: 15px;
+}
+
+.btn_start {
+    background-color: #048853;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+}
+
+.image_start {
+    width: 15px;
+}
+
+.container_fitur {
+    margin-bottom: 90px;
+}
+
+/* fitur rumah section */

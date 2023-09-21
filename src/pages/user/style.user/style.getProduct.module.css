@@ -1,0 +1,239 @@
+/* navbar */
+.container1 {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #048853;
+    width: 230px;
+    height: 707px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: fixed;
+}
+
+.main_content {
+    margin-left: 240px;
+}
+
+.brend {
+    margin-top: 10px;
+    margin-left: -8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.brend:hover {
+    color: #fff;
+}
+
+.main .list_item {
+    margin: 5px auto;
+    height: 35px;
+    border-radius: 40px;
+    transition: 0.5s;
+    background-color: white;
+}
+
+.main .list_item:hover {
+    background-color: #FFD700;
+}
+
+.main .items {
+    margin: 5px auto;
+    height: 35px;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 30px;
+    height: 100%;
+    color: #048853;
+    font-weight: bold;
+}
+
+.btnDrop {
+    background-color: #fff;
+    color: #048853;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    width: 100%;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 39px;
+    height: 36px;
+}
+
+.btnDrop:hover {
+    background-color: #FFD700;
+    color: #048853;
+}
+
+.item1 {
+    background-color: aqua;
+    width: 100%;
+}
+
+.nav1 {
+    margin-left: 10px;
+}
+
+/* navbar */
+
+
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    width: 1060px;
+}
+
+.tempat_cart {
+    background-color: #fff;
+    border-radius: 10px;
+    width: calc(25% - 20px);
+    margin-right: 20px;
+}
+
+.cart1 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: none;
+}
+
+.image_product {
+    width: 100%;
+    height: 200px;
+}
+
+.text_titel {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.tempat_cart:nth-child(4n) {
+    margin-right: 0;
+}
+
+.tempat_cart:hover {
+    background: linear-gradient(160deg, #048853, #000906);
+}
+
+.tempat_cart:hover .cart1 {
+    background: linear-gradient(160deg, #048853, #000906);
+    color: #fff;
+}
+
+.icon_branda {
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.tempat_cart:hover .icon_branda {
+    background-color: #fff;
+    color: black;
+}
+
+.icon_paragraf {
+    font-size: 10px;
+}
+
+.icon_paragraf2 {
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.cart_text {
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.icon_gambar1 {
+    width: 21px;
+}
+
+.icon_gambar2 {
+    width: 18px;
+
+}
+
+.lihat_lainya {
+    text-decoration: none;
+    color: black;
+}
+
+.paragraf_link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.judul_branda {
+    color: #048853;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.tempat_cart .cart:nth-child(4n+1) {
+    clear: left;
+}
+
+.cart2 {
+    background-color: #048853;
+}
+
+.cart3 {
+    color: #048853;
+    padding-right: 2px;
+    font-size: 25px;
+}
+
+.btn_cari {
+    background-color: #048853;
+    border: #048853;
+}
+
+.btn_cari:hover {
+    background-color: #048853;
+    border: #048853;
+}
+
+.buttonYellow {
+    background-color: #FFD700;
+    border: #FFD700;
+}
+
+.buttonYellow:hover {
+    background-color: #FFD700;
+    border: #FFD700;
+}
+
+.buttonRed {
+    background-color: red;
+    border: red;
+}
+
+.buttonRed:hover {
+    background-color: red;
+    border: red;
+}
+
+.btnSewa {
+    color: #fff;
+}
