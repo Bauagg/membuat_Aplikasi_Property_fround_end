@@ -93,3 +93,88 @@
 .chekout {
     margin: auto;
 }
+
+.contenerUpdate {
+    width: 400px;
+    top: -100px;
+    right: 300px;
+    background-color: #048853;
+    height: 300px;
+    padding-top: 20px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.conten3 {
+    margin: 30px;
+}
+
+.inputUpdate {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7px;
+}
+
+.label {
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btnClos {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid black;
+}
+
+.btnClos:hover {
+    background-color: #ff1500;
+}
+
+.btnUpdate2 {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #fba613;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.containerInvoice {
+    width: 500px;
+    padding: 20px;
+    background-color: #048853;
+    border-radius: 20px;
+    position: absolute;
+    left: 500px;
+    top: 90px;
+    padding-bottom: 30px;
+}
+
+.buttonInvoice {
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #fba613;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btnCloss2 {
+    border: 1px solid black;
+    margin-left: 430px;
+}
+
+.judulInvoice {
+    text-align: center;
+    font-weight: bold;
+    color: #fba613;
+}

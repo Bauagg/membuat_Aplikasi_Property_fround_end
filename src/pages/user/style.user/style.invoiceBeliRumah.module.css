@@ -1,0 +1,55 @@
+.container {
+    border-bottom: 2px solid #fba613;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 37px;
+    margin-left: 15px;
+    width: 1040px;
+}
+
+.container2 {
+    background-color: #fff;
+    margin-top: 30px;
+    margin-left: 15px;
+    border-radius: 20px;
+    filter: drop-shadow(3px 3px 1px #909090);
+}
+
+.containerProduct {
+    display: flex;
+    margin: 20px;
+}
+
+.imageProduct {
+    width: 200px;
+}
+
+.keteranganProduct {
+    margin-left: 20px;
+}
+
+.tabelProduct {
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.qty {
+    padding-left: 4px;
+}
+
+.statusProduct {
+    background-color: rgba(255, 77, 77, 0.5);
+    border-radius: 7px;
+    padding: 2px 5px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.tdAddress {
+    font-weight: bold;
+    padding-right: 25px;
+}

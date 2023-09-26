@@ -1,0 +1,43 @@
+.container {
+    width: 1040px;
+    margin-top: 30px;
+}
+
+.conten {
+    border-bottom: 2px solid #fba613;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.container2 {
+    width: 700px;
+    border: 1px solid black;
+    padding: 40px 20px;
+    margin: 60px auto;
+    background-color: #048853;
+    border-radius: 20px;
+}
+
+.label {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btnSubmit {
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #fba613;
+    color: white;
+    font-weight: bold;
+}
+
+.btnkembali {
+    height: 40px;
+    margin-top: 10px;
+    width: 100px;
+}

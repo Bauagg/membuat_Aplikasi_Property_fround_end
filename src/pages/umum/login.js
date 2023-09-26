@@ -38,7 +38,12 @@ const Login = () => {
                 const { role, name, token } = resoult.data.datas
                 dispatch(LoginAction(role, name, token))
                 alert('login success')
-                navitor('/')
+                if (role === 'admin') {
+                    navitor("/navigate-admin")
+                } else {
+                    navitor('/')
+                }
+
             })
             .catch((error) => {
                 console.log('login error', error.response.data.message)

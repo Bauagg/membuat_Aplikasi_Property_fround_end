@@ -1,12 +1,12 @@
 import { Navbar, Dropdown } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import style from '../style.user/style.getProduct.module.css'
+import style from '../../user/style.user/style.getProduct.module.css'
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import logo from '../../../images/Group 1.png'
 import imageHero from '../../../images/Frame 10.png'
 
-const NavbarUser = () => {
+const NavbarAdmin = () => {
     const navigate = useNavigate()
     return (
         <div className={style.container1}>
@@ -22,8 +22,8 @@ const NavbarUser = () => {
 
                 <div className={style.main}>
                     <div className={style.list_item}>
-                        <Link to='/' className={style.link}>
-                            <span className={style.nav1}>Beranda</span>
+                        <Link to='' className={style.link}>
+                            <span className={style.nav1}>Product</span>
                         </Link>
                     </div>
                 </div>
@@ -31,31 +31,24 @@ const NavbarUser = () => {
                 <div className={style.main}>
                     <div className={style.list_item}>
                         <Link to='' className={style.link}>
-                            <span className={style.nav1}>Beli Rumah</span>
+                            <span className={style.nav1}>Order Beli</span>
                         </Link>
                     </div>
                 </div>
 
                 <div className={style.main}>
                     <div className={style.list_item}>
-                        <Link to='/navbar-user/get-product-sewa-rumah' className={style.link}>
-                            <span className={style.nav1}>Sewa Rumah</span>
+                        <Link to='' className={style.link}>
+                            <span className={style.nav1}>Order Sewa</span>
                         </Link>
                     </div>
                 </div>
 
                 <div className={style.main}>
-                    <div className={style.items}>
-                        <Dropdown>
-                            <Dropdown.Toggle variant='warning' className={style.btnDrop}>
-                                History
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu className={style.item1}>
-                                <Dropdown.Item onClick={() => navigate('/navbar-user/invoiceBeliRumah')} >Invoice Beli</Dropdown.Item>
-                                <Dropdown.Item onClick={() => navigate('/navbar-user/invoiceSewaRumah')}>Invoice Sewa</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
+                    <div className={style.list_item}>
+                        <Link className={style.link}>
+                            <span className={style.nav1}>Setting</span>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -66,4 +59,4 @@ const NavbarUser = () => {
     )
 }
 
-export default NavbarUser
+export default NavbarAdmin

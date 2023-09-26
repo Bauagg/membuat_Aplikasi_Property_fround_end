@@ -98,3 +98,48 @@
     border: none;
     border-radius: 10px;
 }
+
+.containerTransaktion {
+    background-color: #048853;
+    width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 5;
+    top: 100px;
+    left: 470px;
+}
+
+.label {
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btnCloss {
+    border: 1px solid black;
+    margin-left: 530px;
+}
+
+.btnCloss:hover {
+    background-color: #ff6868;
+}
+
+.judulInvoice {
+    text-align: center;
+    font-weight: bold;
+    color: #fba613;
+}
+
+.btnPembayaran {
+    width: 100%;
+    height: 44px;
+    border: none;
+    background-color: #fba613;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

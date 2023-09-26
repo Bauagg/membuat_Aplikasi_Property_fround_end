@@ -14,6 +14,12 @@ import { useSelector } from "react-redux"
 import GetProductSewarumah from "../pages/user/componen/Get.Sewa.Rumah"
 import GetCartSewaRumah from "../pages/user/componen/getCartSewaRumah"
 import GetByIdRumahSewa from "../pages/user/componen/GetRumahSewaById"
+import InvoiceSewaRumah from "../pages/user/componen/invoiceSewaRumah"
+import InvoiceBeliRumah from "../pages/user/componen/invoiceBeliRumah"
+import NavbarAdmin from "../pages/admin/componen/Navbar.Admin"
+import GetProductAdmin from "../pages/admin/componen/getProduct"
+import CreateProductAdmin from "../pages/admin/componen/createProduct"
+import UpdateProductAdmin from "../pages/admin/componen/updateProduct"
 
 
 const RouterAplication = () => {
@@ -21,7 +27,11 @@ const RouterAplication = () => {
     const { id } = useSelector(state => state.reducProduct)
     const location = useLocation()
 
-    const pathsWithoutNavbar = ["/navbar-user", `/navbar-user/get-product-by-id/${id}`, '/navbar-user/cart', '/navbar-user/get-product-sewa-rumah', '/navbar-user/cart-sewa-rumah', `/navbar-user/get-rumah-sewa/${id}`];
+    const pathsWithoutNavbar = [
+        "/navbar-user", `/navbar-user/get-product-by-id/${id}`, '/navbar-user/cart', '/navbar-user/get-product-sewa-rumah',
+        '/navbar-user/cart-sewa-rumah', `/navbar-user/get-rumah-sewa/${id}`, "/navbar-user/invoiceSewaRumah", "/navbar-user/invoiceBeliRumah",
+        "/navigate-admin", '/navigate-admin/create-product', `/navigate-admin/update-product/${id}`
+    ];
     const shouldDisplayNavbar = !pathsWithoutNavbar.includes(location.pathname)
     return (
         <div>
@@ -39,6 +49,13 @@ const RouterAplication = () => {
                     <Route path="get-product-sewa-rumah" element={<GetProductSewarumah />} />
                     <Route path="cart-sewa-rumah" element={<GetCartSewaRumah />} />
                     <Route path="cart" element={<GetCartHome />} />
+                    <Route path="invoiceSewaRumah" element={<InvoiceSewaRumah />} />
+                    <Route path="invoiceBeliRumah" element={<InvoiceBeliRumah />} />
+                </Route>
+                <Route path="/navigate-admin" element={role === 'admin' && <NavbarAdmin />}>
+                    <Route path="" element={role === 'admin' && <GetProductAdmin />} />
+                    <Route path="create-product" element={role === 'admin' && <CreateProductAdmin />} />
+                    <Route path="update-product/:id" element={role === 'admin' && <UpdateProductAdmin />} />
                 </Route>
             </Routes>
         </div>

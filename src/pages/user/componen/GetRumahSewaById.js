@@ -15,7 +15,6 @@ const GetByIdRumahSewa = () => {
     const [endDate, setEndDate] = useState('')
     const [errorStartDate, setErrorStartDate] = useState('')
     const [errorEndDate, setErrorEndDate] = useState('')
-    const [contCartSewaRumah, setContCartSewaRumah] = useState(0)
     const navigate = useNavigate()
     const { token } = useSelector((state) => state.reducLogin)
     const { id } = useParams()
@@ -47,10 +46,6 @@ const GetByIdRumahSewa = () => {
                 setIsLoading(false)
             })
             .catch((error) => console.log('get data error', error))
-
-        axios.get('http://localhost:4000/cart-sewa-rumah', { headers: { Authorization: `Bearer ${token}` } })
-            .then((resoul) => setContCartSewaRumah(resoul.data.datas.length))
-            .catch((err) => console.log(err))
     }, [id])
 
     if (isLoading) {
