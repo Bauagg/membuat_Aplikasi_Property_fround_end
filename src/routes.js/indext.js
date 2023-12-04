@@ -20,6 +20,10 @@ import NavbarAdmin from "../pages/admin/componen/Navbar.Admin"
 import GetProductAdmin from "../pages/admin/componen/getProduct"
 import CreateProductAdmin from "../pages/admin/componen/createProduct"
 import UpdateProductAdmin from "../pages/admin/componen/updateProduct"
+import InvoiceOrderBeliRumah from "../pages/admin/componen/invoiceOrderBeliRumah"
+import InvoiceOrderSuccessBeliRumah from "../pages/admin/componen/orderSuccess.beliRumah"
+import InvoiceOrderSewarumah from "../pages/admin/componen/imvoiceOrderSewa"
+import OrderSuccessSewaRumah from "../pages/admin/componen/orderSuccesSewaRumah"
 
 
 const RouterAplication = () => {
@@ -30,7 +34,8 @@ const RouterAplication = () => {
     const pathsWithoutNavbar = [
         "/navbar-user", `/navbar-user/get-product-by-id/${id}`, '/navbar-user/cart', '/navbar-user/get-product-sewa-rumah',
         '/navbar-user/cart-sewa-rumah', `/navbar-user/get-rumah-sewa/${id}`, "/navbar-user/invoiceSewaRumah", "/navbar-user/invoiceBeliRumah",
-        "/navigate-admin", '/navigate-admin/create-product', `/navigate-admin/update-product/${id}`
+        "/navigate-admin", '/navigate-admin/create-product', `/navigate-admin/update-product/${id}`, '/navigate-admin/invoice-beli-rumah',
+        '/navigate-admin/order-success-beli-rumah', '/navigate-admin/invoice-sewa-rumah', "/navigate-admin/order-success-sewa-rumah"
     ];
     const shouldDisplayNavbar = !pathsWithoutNavbar.includes(location.pathname)
     return (
@@ -56,6 +61,10 @@ const RouterAplication = () => {
                     <Route path="" element={role === 'admin' && <GetProductAdmin />} />
                     <Route path="create-product" element={role === 'admin' && <CreateProductAdmin />} />
                     <Route path="update-product/:id" element={role === 'admin' && <UpdateProductAdmin />} />
+                    <Route path="invoice-beli-rumah" element={role === 'admin' && <InvoiceOrderBeliRumah />} />
+                    <Route path="order-success-beli-rumah" element={role === 'admin' && <InvoiceOrderSuccessBeliRumah />} />
+                    <Route path="invoice-sewa-rumah" element={role === 'admin' && <InvoiceOrderSewarumah />} />
+                    <Route path="order-success-sewa-rumah" element={role === 'admin' && <OrderSuccessSewaRumah />} />
                 </Route>
             </Routes>
         </div>

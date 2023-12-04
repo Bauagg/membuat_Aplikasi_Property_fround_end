@@ -1,13 +1,22 @@
-import { Navbar, Dropdown } from "react-bootstrap"
+import { Navbar, Dropdown, Button } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../style.user/style.getProduct.module.css'
 import { Link, Outlet, useNavigate } from "react-router-dom";
-
 import logo from '../../../images/Group 1.png'
 import imageHero from '../../../images/Frame 10.png'
+import { useDispatch } from "react-redux";
+import { LogoutAction } from '../../../redux/action/action'
 
 const NavbarUser = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const hendleLogout = () => {
+        const user = null
+        const token = null
+        dispatch(LogoutAction(user, token))
+        navigate('/')
+    }
     return (
         <div className={style.container1}>
             <div className={style.sidebar}>
@@ -58,6 +67,9 @@ const NavbarUser = () => {
                         </Dropdown>
                     </div>
                 </div>
+                <Button variant="warning" className={style.btnLogout} onClick={hendleLogout}>
+                    Logout
+                </Button>
             </div>
             <div className={style.main_content}>
                 <Outlet />

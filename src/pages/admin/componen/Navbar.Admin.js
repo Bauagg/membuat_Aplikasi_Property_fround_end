@@ -1,13 +1,22 @@
-import { Navbar, Dropdown } from "react-bootstrap"
+import { Navbar, Button } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../../user/style.user/style.getProduct.module.css'
 import { Link, Outlet, useNavigate } from "react-router-dom";
-
+import { LogoutAction } from '../../../redux/action/action'
 import logo from '../../../images/Group 1.png'
 import imageHero from '../../../images/Frame 10.png'
+import { useDispatch } from "react-redux";
 
 const NavbarAdmin = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const hendleLogout = () => {
+        const user = null
+        const token = null
+        dispatch(LogoutAction(user, token))
+        navigate('/')
+    }
     return (
         <div className={style.container1}>
             <div className={style.sidebar}>
@@ -30,7 +39,7 @@ const NavbarAdmin = () => {
 
                 <div className={style.main}>
                     <div className={style.list_item}>
-                        <Link to='' className={style.link}>
+                        <Link to='/navigate-admin/invoice-beli-rumah' className={style.link}>
                             <span className={style.nav1}>Order Beli</span>
                         </Link>
                     </div>
@@ -38,7 +47,7 @@ const NavbarAdmin = () => {
 
                 <div className={style.main}>
                     <div className={style.list_item}>
-                        <Link to='' className={style.link}>
+                        <Link to='/navigate-admin/invoice-sewa-rumah' className={style.link}>
                             <span className={style.nav1}>Order Sewa</span>
                         </Link>
                     </div>
@@ -51,6 +60,12 @@ const NavbarAdmin = () => {
                         </Link>
                     </div>
                 </div>
+
+
+                <Button variant="warning" className={style.btnLogout} onClick={hendleLogout}>
+                    Logout
+                </Button>
+
             </div>
             <div className={style.main_content}>
                 <Outlet />

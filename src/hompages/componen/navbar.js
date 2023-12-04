@@ -6,13 +6,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import gambarProfile from '../../images/profile.png'
 import { useState } from 'react';
-import { useEffect } from 'react';
-import axios from 'axios'
 import { LogoutAction } from '../../redux/action/action';
 
 const Navbarhompages = () => {
     const [toggle, setToggle] = useState(false)
-    const { user, token } = useSelector(state => state.reducLogin)
+    const { user } = useSelector(state => state.reducLogin)
     const navitae = useNavigate()
     const dispatch = useDispatch()
 

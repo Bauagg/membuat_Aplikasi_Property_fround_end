@@ -203,7 +203,6 @@ const UpdateProductAdmin = () => {
                                     onChange={(e) => setCategory(e.target.value)}
                                     isInvalid={errorCategory}
                                 >
-                                    <option>Open this select menu</option>
                                     <option value="Property Baru">Property Baru</option>
                                     <option value="Sewa Rumah">Sewa Rumah</option>
                                     <option value="Beli Rumah">Beli Rumah</option>

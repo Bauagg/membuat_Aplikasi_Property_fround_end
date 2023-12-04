@@ -15,12 +15,13 @@ import { DataIdGlobal } from "../../../redux/action/action";
 const GetProductSewarumah = () => {
     const [contCartSewaRumah, setContCartSewaRumah] = useState(0)
     const [product, setProduct] = useState([])
+    const [search, setSearch] = useState('')
     const navigate = useNavigate()
     const { token } = useSelector(state => state.reducLogin)
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        axios.get(`http://localhost:4000/product/`)
+    const searchProduct = () => {
+        axios.get(`http://localhost:4000/product/?name=${search}`)
             .then((resolt) => {
                 const filterProduct = resolt.data.datas.filter((product) => {
                     return product.category.name === 'Sewa Rumah'
@@ -28,6 +29,10 @@ const GetProductSewarumah = () => {
                 setProduct(filterProduct)
             })
             .catch((error) => console.log('get data error', error))
+    }
+
+    useEffect(() => {
+        searchProduct()
 
         axios.get('http://localhost:4000/cart-sewa-rumah', { headers: { Authorization: `Bearer ${token}` } })
             .then((resoul) => setContCartSewaRumah(resoul.data.datas.length))
@@ -46,8 +51,10 @@ const GetProductSewarumah = () => {
                                         placeholder="Recipient's username"
                                         aria-label="Recipient's username"
                                         aria-describedby="basic-addon2"
+                                        value={search}
+                                        onChange={(e) => setSearch(e.target.value)}
                                     />
-                                    <Button className={style.btn_cari}>
+                                    <Button className={style.btn_cari} onClick={() => searchProduct()}>
                                         Cari
                                     </Button>
                                 </InputGroup>

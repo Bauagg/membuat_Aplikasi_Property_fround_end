@@ -60,8 +60,6 @@ const GetCartHome = () => {
             .catch((err) => console.log(err))
     }, [])
 
-    console.log(idAddress)
-
     const hendleDleteCartBeliRumah = (id) => {
         axios.delete(`http://localhost:4000/cart-beli-rumah/${id}`, { headers: { Authorization: `Bearer ${token}` } })
             .then(() => {
@@ -75,9 +73,22 @@ const GetCartHome = () => {
             .catch((error) => console.log(error))
     }
 
-    const updateCartBeliRumha = (id) => {
+    const handleDecreaseQty = (itemId) => {
+        const updatedCart = dataCart.map((item) => {
+            if (item._id === itemId && item.qty > 1) {
+                updateCartBeliRumah(itemId, item.propertyId._id, item.qty - 1)
+                return { ...item, qty: item.qty - 1 };
+            }
+            return item;
+        });
 
-        axios.put(`http://localhost:4000/cart-beli-rumah/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+        setDataCart(updatedCart);
+
+    };
+
+    const updateCartBeliRumah = (id, propertyId, newQty) => {
+
+        axios.put(`http://localhost:4000/cart-beli-rumah/${id}`, { propertyId, qty: newQty }, { headers: { Authorization: `Bearer ${token}` } })
             .then(() => {
                 axios.get('http://localhost:4000/cart-beli-rumah', { headers: { Authorization: `Bearer ${token}` } })
                     .then((resoult) => {
@@ -97,6 +108,19 @@ const GetCartHome = () => {
         }
 
     }
+
+    const handleIncreaseQty = (itemId) => {
+        const updatedCart = dataCart.map((item) => {
+            if (item._id === itemId) {
+                updateCartBeliRumah(itemId, item.propertyId._id, item.qty + 1)
+                return { ...item, qty: item.qty + 1 };
+            }
+            return item;
+        });
+
+        setDataCart(updatedCart);
+
+    };
 
     const invoiceBeliRumah = () => {
         if (!username) {
@@ -144,7 +168,7 @@ const GetCartHome = () => {
 
         axios.post('http://localhost:4000/invoice-beli-rumah', bodyReques, { headers: { Authorization: `Bearer ${token}` } })
             .then(() => {
-                navigate()
+                navigate('/navbar-user/invoiceBeliRumah')
             })
             .catch((err) => console.log(err))
 
@@ -157,7 +181,7 @@ const GetCartHome = () => {
 
         axios.put(`http://localhost:4000/address/${idAddress}`, bodyRequesAddress, { headers: { Authorization: `Bearer ${token}` } })
             .then(() => {
-                alert('update addtess success')
+                navigate('/navbar-user/invoiceBeliRumah')
             })
             .catch((err) => console.log(err))
     }
@@ -387,56 +411,52 @@ const GetCartHome = () => {
                                         <h3 className="text-dark">Shopping Continue</h3>
                                     </Link>
                                 </div>
-                                {
-                                    dataCart > 0 ? (
-                                        <div>
-                                            <h4 className="text-success">Shopping cart</h4>
-                                            <p className="mb-4">You have {cartIndex} item in your cart</p>
-                                            <div className="d-flex justify-content-between">
-                                                <button className={style.btnSelect} onClick={() => idAddress ? setToggleTRansaksi(true) : setToogleInputAddress(true)}>Transaksi</button>
-                                                <button className={style.btnSelect}>Select All</button>
-                                            </div>
-                                            {
-                                                dataCart.map((index, item) => {
-                                                    return (
-                                                        <Row>
-                                                            <Col>
-                                                                <div key={index._id} className={style.container2}>
-                                                                    <button className={style.btnSampah} onClick={() => hendleDleteCartBeliRumah(index._id)}>
-                                                                        <img alt="btn sampah" src={iconSampah} /> Sampah
-                                                                    </button>
-                                                                    <div className={style.conten}>
-                                                                        <img alt="ptoduct cart" src={index.propertyId.image} className={style.imageProduct} />
-                                                                        <div className="ps-3">
-                                                                            <h5 className={style.judulProduct}>{index.propertyId.name}</h5>
-                                                                            <p className={style.pragrafProduct}>{index.propertyId.category.name}</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className={style.qty}>
-                                                                        <button className={style.btnMinus}>Minus</button>
-                                                                        <input placeholder="0" className={style.inputQty} value={index.qty} readOnly />
-                                                                        <button className={style.btnPlus}>Plus</button>
-                                                                    </div>
-                                                                    <div className={style.conten1}>
-                                                                        <h6>IDR.{index.total}</h6>
-                                                                        <Form.Check label='Chekout'
-                                                                            isValid
-                                                                            isInvalid={errorInvoice}
-                                                                            checked={invoice.includes(index._id)}
-                                                                            onChange={() => hendleOnCheckot(index._id)}
-                                                                        />
-                                                                    </div>
+
+                                <div>
+                                    <h4 className="text-success">Shopping cart</h4>
+                                    <p className="mb-4">You have {cartIndex} item in your cart</p>
+                                    <div className="d-flex justify-content-between">
+                                        <button className={style.btnSelect} onClick={() => idAddress ? setToggleTRansaksi(true) : setToogleInputAddress(true)}>Transaksi</button>
+                                        <button className={style.btnSelect}>Select All</button>
+                                    </div>
+                                    {
+                                        dataCart.map((index, item) => {
+                                            return (
+                                                <Row>
+                                                    <Col>
+                                                        <div key={index._id} className={style.container2}>
+                                                            <button className={style.btnSampah} onClick={() => hendleDleteCartBeliRumah(index._id)}>
+                                                                <img alt="btn sampah" src={iconSampah} /> Sampah
+                                                            </button>
+                                                            <div className={style.conten}>
+                                                                <img alt="ptoduct cart" src={index.propertyId.image} className={style.imageProduct} />
+                                                                <div className="ps-3">
+                                                                    <h5 className={style.judulProduct}>{index.propertyId.name}</h5>
+                                                                    <p className={style.pragrafProduct}>{index.propertyId.category.name}</p>
                                                                 </div>
-                                                            </Col>
-                                                        </Row>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    ) : (
-                                        <p>Maaf anda masi belum memiliki Cart beli Rumah</p>
-                                    )
-                                }
+                                                            </div>
+                                                            <div className={style.qty}>
+                                                                <button className={style.btnMinus} onClick={() => handleDecreaseQty(index._id)}>Minus</button>
+                                                                <input placeholder="0" className={style.inputQty} value={index.qty} readOnly />
+                                                                <button className={style.btnPlus} onClick={() => handleIncreaseQty(index._id)}>Plus</button>
+                                                            </div>
+                                                            <div className={style.conten1}>
+                                                                <h6>IDR.{index.total}</h6>
+                                                                <Form.Check label='Chekout'
+                                                                    isValid
+                                                                    isInvalid={errorInvoice}
+                                                                    checked={invoice.includes(index._id)}
+                                                                    onChange={() => hendleOnCheckot(index._id)}
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                            )
+                                        })
+                                    }
+                                </div>
+
                             </div>
                         </div>
                     </Col>

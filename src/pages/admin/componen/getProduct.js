@@ -20,7 +20,7 @@ const GetProductAdmin = () => {
         axios.get('http://localhost:4000/product')
             .then((resoult) => setDataProduct(resoult.data.datas))
             .catch((err) => console.log(err))
-    })
+    }, [])
 
     const hendleDeleteProduct = (id) => {
         axios.delete(`http://localhost:4000/product/${id}`, { headers: { Authorization: `Bearer ${token}` } })
